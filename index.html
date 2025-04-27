@@ -1,0 +1,906 @@
+    <?php
+	require_once('../../lib/sql.php');
+    require_once("../../lib/cookie.php");
+
+    $IDDrzava = $posetilac->getIDDrzavePosetioca();
+    if (isset($_GET['debugDrzava'])) $IDDrzava = $_GET['debugDrzava'];
+//var_dump($IDDrzava);
+//$IDDrzava=21;
+    if ($IDDrzava == 21) {
+        // 	header('Location:'.$_SERVER ["HTTP_HOST"].'/prijavaBa.php');
+        $id_drzava = $IDDrzava;
+        //header('Location:http://www.biznis-akademija.com/prijavaBa.php');
+        // 	echo $_SERVER ["HTTP_HOST"].'/prijavaBa.php';
+       // header("Location:remarketing-bih");
+	   include("index-bih.php");
+	   die;
+        
+    }
+	
+?>
+    
+	<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>Frontend JavaScript Development program na ITAcademy</title>
+
+        <meta name="viewport" content="width=device-width">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+		
+		<link rel="icon" type="image/x-icon" href="images/logoi/ita-favicon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        <script src="js/jquery.fadethis.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+        var myLazyLoad = new LazyLoad({
+            elements_selector: ".lazy"
+        });
+        </script>
+
+        
+
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PDVBRX');</script>
+        <!-- End Google Tag Manager -->
+
+        <script>
+        $(document).ready(function() {
+
+        	setTimeout(function(){
+        		$('body').addClass('loaded');
+        	}, 500);
+
+          function aniim1(){
+            $( "#txt-anim1" ).animate({
+              opacity: 1
+            })
+          }
+          setTimeout(aniim1, 1600);
+
+          function aniim11(){
+            $( "#txt-anim1-bl" ).animate({
+              opacity: 1
+            })
+          }
+          setTimeout(aniim11, 1600);
+
+          function aniim2(){
+            $( "#txt-anim2" ).animate({
+              opacity: 1
+            })
+          }
+          setTimeout(aniim2, 1900);
+
+          function aniim3(){
+            $( "#txt-anim3" ).animate({
+              opacity: 1
+            })
+          }
+          setTimeout(aniim3, 2400);
+
+        });
+      </script>
+    </head>
+
+    <body>
+
+      <div id="loader-wrapper">
+          <!-- <div id="loader"></div> -->
+
+          <!-- <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div> -->
+
+          <section style="background: #fff;height:100vh" class="modernWeb section">
+              <div class="modernWrap section__wrap">
+                  <div class="center">
+                      <div class="part part-1"></div>
+                      <div class="part part-2"><span>{ }</span></div>
+                      <div class="part part-3"></div>
+                  </div>
+              </div>
+          </section>
+
+      </div>
+
+        <div id="wrapper">
+
+            <div class="gradient">
+
+                <div class="fixed_size">
+                    <header id="header">
+                        <div id="logo">
+                            <a href="http://www.it-akademija.com" target="_blank"><img src="https://www.it-akademija.com/images/logo.png"></a>
+                        </div>
+                        <!--end logo -->
+
+                        <div id="slogan">
+                            <p>Po zvaničnom ovlašćenju Cambridge odeljenja za međunarodne ispite i vodećih svetskih IT sertifikacionih programa</p>
+                        </div>
+                        <!--end slogan -->
+
+                    </header>
+                </div>
+                <!--fixed_size-->
+
+                <div class="full_size bg_red oko_nav">
+
+                    <div id="navigacija">
+                        <nav class="desktop">
+                            <ul>
+                                <li><a target="_blank" href="/birajte-sest-odseka-it-strucnost-zvanicna-zvanja-eksperata">PROGRAM</a>
+                                </li>
+                                <li><a target="_blank" href="/upis-it-akademija-prijavite-se-na-vreme">UPIS</a>
+                                </li>
+                                <li><a target="_blank" href="/sta-dobijate-skolovanjem-na-itacademy">ŠTA DOBIJATE</a>
+                                </li>
+                                <li><a target="_blank" href="/online-ucenje-na-daljinu">UČENJE NA
+
+						DALJINU</a>
+                                </li>
+                                <li><a target="_blank" href="/kako-da-dobijete-diplomu-i-sertifikate-za-visoko-placene-poslove">DIPLOME I
+
+						SERTIFIKATI</a>
+                                </li>
+                                <li><a target="_blank" href="/sta-je-dobro-da-znate-o-nama-profesionalno-bavljenje-racunarima">O IT AKADEMIJI</a>
+                                </li>
+                                <li class="garan">
+                                    <a href="/vase-zadovoljstvo-nam-je-na-prvom-mestu" target="_blank"><img src="https://www.it-akademija.com/images/banner-header.png"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="mobile">
+                            <button id="menu-btn">Meni</button>
+                            <div>
+                                <ul>
+                                    <li><a target="_blank" href="/birajte-sest-odseka-it-strucnost-zvanicna-zvanja-eksperata">PROGRAM</a>
+                                    </li>
+                                    <li><a target="_blank" href="/upis-it-akademija-prijavite-se-na-vreme">UPIS</a>
+                                    </li>
+                                    <li><a target="_blank" href="/sta-dobijate-skolovanjem-na-itacademy">ŠTA DOBIJATE</a>
+                                    </li>
+                                    <li><a target="_blank" href="/online-ucenje-na-daljinu">UČENJE NA
+
+							DALJINU</a>
+                                    </li>
+                                    <li><a target="_blank" href="/kako-da-dobijete-diplomu-i-sertifikate-za-visoko-placene-poslove">DIPLOME I
+
+							SERTIFIKATI</a>
+                                    </li>
+                                    <li><a target="_blank" href="/sta-je-dobro-da-znate-o-nama-profesionalno-bavljenje-racunarima">O IT AKADEMIJI</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--navigacija-->
+
+                </div>
+                <!--fixed_size-->
+
+            </div>
+            <!-- gradient -->
+
+
+                        <style>
+                        .background-img {
+                            background-image: url("images/pozadinska.jpg");
+                            background-position: top right;
+                            background-attachment: fixed;
+                        }
+
+                        #txt-anim1-bl {
+                            padding: 2px 6px;
+                            float: right;
+                            text-shadow: none;
+                            font-size: 20px;
+                            display: inline-block;
+                            text-align: right;
+                            background: #e31b23;
+                            color: #fff;
+                        }
+                      </style>
+
+                        <!-- <script>
+                        $(document).ready(function(){
+                        $('.background-img').mousemove(function(e){
+                          var pageX;
+                          var pageY;
+                          var amountMovedX = 'right';
+                          var amountMovedY = (e.pageY * -1 / 5);
+                          $('.values').html("<div>" + amountMovedX + 'px ' + amountMovedY + 'px' + "</div>");
+                          $(this).css('background-position',amountMovedX+' '+amountMovedY+'px');
+                        });
+                        });
+                        </script> -->
+            <div class="background-img">
+
+              <div id="white">
+
+                <div class="prvi">
+
+                    <section class="levo">
+
+                        <header>
+                            <p id="txt-anim1"> <br/><strong>Frontend JavaScript Development<strong></p>
+                           <!--     <span id="txt-anim1-bl">Nastava počinje 1. decembra</span>-->
+                        </header>
+
+                    </section>
+
+                </div>
+                <!-- prvi -->
+
+                  <div class="slika">
+
+                      <div class="levo">
+                          <p id="txt-anim2" style="margin-top:15px"><span style="font-size: 20px;margin-bottom: 10px;display: block;font-weight: 500;">Postani web programer sa najtraženijim veštinama na IT tržištu</span>Razvoj interaktivnih web sajtova i web aplikacija jedno je od najtraženijih zanimanja današnjice, a nezadrživi razvoj web tehnologija i interneta samo će još više povećati potražnju za stručnjacima koji se bave Frontend i JavaScript programiranjem.
+                              <br />
+                              <br /> Zbog toga smo odlučili da pokrenemo novi program Frontend JavaScript Development, na kome ćete za samo 12 meseci usvojiti znanja koja ćete odmah moći da primenite u praksi i pronađete odlično plaćen posao, koji odlikuje profesiju web programera.</p>
+
+
+                          <div id="txt-anim3" style="margin-top:30px;">
+                            <section class="col hero">
+                        		   <div class="button raised hoverable ">
+                        		      <div class="anim"></div><a href="#upis"><span>ISKORISTITE UPIS SA POPUSTOM »</span></a>
+                        		   </div>
+                        		</section>
+
+                          </div>
+
+                          <p>
+                              <br>
+                              <br>
+                          </p>
+                      </div>
+
+                  </div>
+                  <!-- slika -->
+
+              </div>
+              <!-- white -->
+
+            </div>
+
+
+
+            <div class="sivo drugiSlika">
+
+                <div class="drugi">
+
+                    <section>
+
+                        <header>
+                            <h2 class="centar">Steknite najkompletnija znanja web programiranja za samo 12 meseci!</h2>
+                        </header>
+
+
+                    <div class="card">
+                        <p class="centar">Tokom školovanja na programu Frontend JavaScript Development na ITAcademy usvojićete najnaprednija znanja i praktične veštine za web programiranje.</p>
+
+                        <p class="centar">Kroz niz zanimljivih kurseva upoznaćete se sa HTML i CSS tehnologijama, savladati JavaScript programski jezik, izučavati napredne koncepte objektno orijentisanog programiranja, kao i tri danas najpopularnija JavaScript okvira za kreiranje kijentskog dela web aplikacija – Vue.js, Angular i React.
+                            <br>
+                        </p>
+                        <p class="centar">Ovaj program obrađuje i upotrebu Adobe Photoshop i Adobe Illustrator softvera za kreiranje vizuelnih elemenata, tehnike za manipulaciju DOM-om i bibliotekama JQuery i JQuery UI za dizajn interfejsa, a poseban deo posvećen je i kreiranju web igara pomoću JavaScripta.</p>
+
+                        <p class="centar">Ukratko, po završetku školovanja na ovom programu bićete maksimalno obučeni za rad sa najpopularnijim tehnologijama i alatima koje koriste uspešni frontend JavaScript developeri.
+                            <br>
+                        </p>
+                        <div class="slide-bottom">
+                          <div class="container-flex">
+                            <div>
+                              <img src="images/programi/1.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/1-2.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/2.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/3.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/4.png" />
+                            </div>
+                          </div>
+  												<br />
+  												<div class="container-flex">
+                            <div>
+                              <img src="images/programi/5.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/6.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/7.png" />
+                            </div>
+                            <div>
+                              <img src="images/programi/8.png" />
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                        
+
+
+                        
+                
+                    </section>
+
+                </div>
+                <!-- drugi -->
+
+            </div>
+            <!-- belo -->
+            
+    
+        
+        
+
+
+            <div class="belo treciSlika">
+
+                <div class="treci">
+
+                  <img class="slide-bottom" src="images/trecaSlika.gif" />
+
+                    <header class="centar">
+                        <h2>Naplatite svoje znanje kroz kreiranje naprednih sajtova, web aplikacija, JavaScript igrica…</h2>
+                    </header>
+
+                    <div class="levo">
+
+                        <p class="centar">Stečena znanja tokom jednogodišnjeg školovanja na programu Frontend JavaScript Development otvoriće vam vrata
+                            <br />različitih IT oblasti.
+                            <br>
+                            <br> Usvojene veštine moći ćete da naplatite za kreiranje interaktivnih sajtova i web aplikacija, online igrica ili dizajniranje korisničkih interfejsa, a poznavanje najmodernijih tehnika za frontend development omogućiće vam da vrlo brzo pronađete siguran i odlično plaćen angažman, bilo kao deo tima u nekoj kompaniji, bilo kao freelancer.</p>
+
+                    </div>
+                    <!-- levo -->
+
+                </div>
+                <!-- treci -->
+
+            </div>
+            <!-- belo -->
+
+            
+
+            <div class="belo cetvrtaSlika">
+
+                <div class="cetvrti">
+
+                    <div class="levo">
+
+                        <header>
+                            <h2>Kako izgledaju predavanja?</h2>
+                        </header>
+
+                        <p>Nastavu na ovom programu možete pratiti tradicionalno, u najmodernije opremljenim salama ITAcademy u Zemunu, ili online, putem platforme za učenje na daljinu. U oba slučaja predavanja su zasnovana na praktičnim primerima, minimumu teorije i maksimumu prakse. Učenje je bazirano na zadacima i projektima, čime se veoma brzo osposobljavate da samostalno obavljate budući posao.</p>
+
+                        <p>Oba načina školovanja ispunjavaju visoke standarde grupacije pet vodećih svetskih univerziteta.</p>
+
+                        <p>Za polaznike koji se školuju na daljinu ili zbog obaveza nisu u mogućnosti da prisustvuju nekom od predavanja, obezbeđen je Live stream koji vam omogućava da se direktno uključite na čas, gde god da se u tom trenutku nalazite. Nijedno predavanje nećete propustiti, a i nakon završetka časa moći ćete naknadno da pregledate snimke koji su vam neograničeno dostupni u Video-­arhivi.</p>
+
+                    </div>
+                    <!-- levo -->
+
+                </div>
+                <!-- cetvrti -->
+
+            </div>
+            <!-- belo -->
+
+            <div class="belo">
+
+                <div class="peti">
+
+                    <header>
+                        <h2 class="centar">Frontend JavaScript Development — plan i program</h2>
+                    </header>
+<div class="slide-bottom" data-plugin-options='{"offset":-400}'>
+
+                      <table class="tabela plan" border="0">
+                      <tbody>
+                      <tr>
+                      <td>No.</td>
+                      <td>Code</td>
+                      <td>SEMESTER I</td>
+                      <td>No. of classes</td>
+                      </tr>
+                      <tr>
+                      <td>1</td>
+                      <td>IFE</td>
+                      <td>Introduction to Frontend Development</td>
+                      <td>8</td>
+                      </tr>
+                      <tr>
+                      <td>2</td>
+                      <td>HCF</td>
+                      <td>HTML &amp; CSS Fundamentals</td>
+                      <td>28</td>
+                      </tr>
+                      <tr>
+                      <td>3</td>
+                      <td>JSF</td>
+                      <td>JavaScript Programming Fundamentals</td>
+                      <td>36</td>
+                      </tr>
+                      <tr>
+                      <td>4</td>
+                      <td>ACSS</td>
+                      <td>Advanced CSS</td>
+                      <td>28</td>
+                      </tr>
+                      <tr>
+                      <td>5</td>
+                      <td>WSB</td>
+                      <td>Website Building</td>
+                      <td>24</td>
+                      </tr>
+                      <tr>
+                      <td>6</td>
+                      <td>EL1/GL1</td>
+                      <td>English Language 1 / German Language 1*</td>
+                      <td>online</td>
+                      </tr>
+                      </tbody>
+                      </table>
+                    <br>
+
+
+                    <table class="tabela plan" border="0">
+                    <tbody>
+                    <tr>
+                    <td>No.</td>
+                    <td>Code</td>
+                    <td>SEMESTER II</td>
+                    <td>No. of classes</td>
+                    </tr>
+                    <tr>
+                    <td>7</td>
+                    <td>DT</td>
+                    <td>UI/UX Design Tools</td>
+                    <td>32</td>
+                    </tr>
+                    <tr>
+                    <td>8</td>
+                    <td>AJS</td>
+                    <td>Advanced JavaScript Programming</td>
+                    <td>28</td>
+                    </tr>
+                    <tr>
+                    <td>9</td>
+                    <td>DA</td>
+                    <td>Data Access</td>
+                    <td>16</td>
+                    </tr>
+                    <tr>
+                    <td>10</td>
+                    <td>JSA</td>
+                    <td>JavaScript Application Development</td>
+                    <td>28</td>
+                    </tr>
+                    <tr>
+                    <td>11</td>
+                    <td>AGD</td>
+                    <td>Animation and Game Development</td>
+                    <td>20</td>
+                    </tr>
+                    <tr>
+                    <td>12</td>
+                    <td>BT</td>
+                    <td>Blockchain Technologies</td>
+                    <td>4</td>
+                    </tr>
+                    <tr>
+                    <td>13</td>
+                    <td>CCS</td>
+                    <td>Cambridge Computer Science**</td>
+                    <td>online</td>
+                    </tr>
+                    <tr>
+                    <td>14</td>
+                    <td>EL2/GL2</td>
+                    <td>English Language 2 / German Language 2*</td>
+                    <td>online</td>
+                    </tr>
+                    <tr>
+                    <td>15</td>
+                    <td>PRJ</td>
+                    <td>Project</td>
+                    <td>/</td>
+                    </tr>
+                    <tr>
+                    <td>16</td>
+                    <td>FCE</td>
+                    <td>FCE/BEC Vantage**</td>
+                    <td>online</td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+                  </div>
+
+                    <p class="maliFont" style="clear: both; text-align: left !important;">
+                        <br> * Polaznici biraju koji od navedenih jezika žele da izučavaju i na osnovu toga pohađaju jedan od ova dva kursa.
+                        <br> ** Izborni predmet.
+                        <br> *** Pripremne kurseve za polaganje FCE ili BEC Vantage ispita mogu pohađati samo polaznici koji su završili English Upper Intermediate Level.</p>
+
+                </div>
+                <!-- peti -->
+
+            </div>
+            <!-- sivo -->
+
+            
+
+            <div id="prijavite">
+
+              <div class="fixed_size">
+            
+                <h2 class="centar">Obezbedite sebi međunarodno priznate sertifikate</h2>
+            
+                <p class="centar">ITAcademy vam omogućava da polažete ispite za prestižne međunarodno priznate sertifikate i diplome:</p>
+            
+                <div class="ikonice predavaci_krug slide-bottom fixed_size centar" style="opacity: 1; visibility: visible; position: relative; top: 0px;">
+            
+            
+                  <div class="ikonica turn">
+                    <p><img src="images/sertifikati/1111.png"></p>
+            
+                    <p> <strong>LPI</strong> Web Development Essentials </p>
+                  </div>
+                  <div class="ikonica turn">
+                    <p><img src="images/sertifikati/1112.png"></p>
+            
+                    <p><strong>W3Schools </strong> JavaScript Developer Certificate </p>
+                  </div>
+                  <div class="ikonica turn">
+                    <p><img src="images/sertifikati/1113.png"></p>
+            
+                    <p><strong>Cambridge International</strong> A&AS Level Computer Science </p>
+                  </div>
+                  <div class="ikonica turn">
+                    <p><img src="images/sertifikati/1114.png"></p>
+            
+                    <p><strong>ITAcademy</strong> Certified JavaScript Developer</p>
+                  </div>
+
+                  <div class="ikonica turn">
+                    <p><img src="images/sertifikati/1115.png"></p>
+            
+                    <p><strong>CIW</strong> JavaScript Specialist</p>
+                  </div>
+            
+                </div>
+            
+              </div><!--fixed_size-->
+            
+            </div><!--prijavite-->
+            
+
+            <div class="container" style="margin-bottom: 40px; margin-top: 40px;">
+                <div class="section-title padding-top" style="margin-top: 0px;">
+                   <h2 style="font-size: 2.5em; text-align: center;">ŠTA SVE DOBIJATE ŠKOLOVANJEM NA ITACADEMY?
+                   </h2>
+                </div>
+                <div class="col-xs-12">
+                   <div class="row text-center">
+                      <p style="">Ono što školovanje na ITAcademy čini jedinstvenim jesu brojni edukativni servisi koji će vam pomoći da ostvarite uspešnu IT karijeru.
+                      </p>
+                   </div>
+                </div>
+                <div class="col-xs-12">
+       
+                   <div class="row">
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-durat.ion: 0.2s; animation-delay: 0.2s;">
+                         <div class="feature-box">
+                            <img src="images/huba.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>100 besplatnih sati u IT HUBovima.</strong> Kao polaznik tradicionalne nastave imaćeš sjajnu priliku da u društvu rastuće IT zajednice primeniš znanja koja si stekao, upoznaš ljude sa kojima ćeš pokrenuti zajedničke projekte i stvoriš nove poslovne prilike.   
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s;">
+                         <div class="feature-box">
+                            <img src="images/app.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>Znanje na dodir i svuda sa vama.</strong> Pomoću besplatne ITAcademy mobilne aplikacije možete pratiti predavanja uživo, pristupati multimedijalnim sadržajima i materijalima za učenje, rešavati testove i komunicirati sa predavačima. Bilo kada, bilo gde.
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s; ">
+                         <div class="feature-box">
+                            <img src="images/lap.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>Radno iskustvo odmah po završetku školovanja.</strong> ITAcademy polaznici koji se istaknu svojim rezultatima tokom obuke imaju šansu da dobiju stručnu praksu u nekim od najprestižnijih kompanija na tržištu i tako steknu neophodno radno iskustvo.     
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="row">
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s; ">
+                         <div class="feature-box">
+                            <img src="images/ccd.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>Centar za razvoj karijere.</strong> Usluge Centra su besplatne za polaznike, a one uključuju resurse, posebne programe, seminare i individualna savetovanja na temu razvoja karijere, kao i asistenciju u obezbeđivanju stručne prakse i zapošljavanja.
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s; ">
+                         <div class="feature-box">
+                            <img src="images/pdp.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>ITAcademy Personal Development Program.</strong> Ovaj jedinstveni program dodatne obuke omogućava ti sticanje transverzalnih veština (motivacija, samopouzdanje, fokus, komunikativnost, timski rad i dr.) neophodnih za uspešno obavljanje budućeg posla.
+                            </p>
+                         </div>
+                      </div>
+                      <div class="col-lg-4 wow " data-wow-duration=".2s" data-wow-delay=".2s" style="visibility: visible; animation-duration: 0.2s; animation-delay: 0.2s; ">
+                         <div class="feature-box">
+                            <img src="images/arhitektura_saznanja.png" class="img-tab" alt="#" width="100px" style="" >
+                            <p style="">
+                               <strong>Četvorogodišnje veštine za manje od 12 meseci.</strong> Inovativna metodologija učenja na ITAcademy omogućava 3 do 4 puta veće angažovanje tokom nastave, tako da ćeš za manje od 12 meseci preuzeti veštine za koje su ranije bile potrebne 2 do 4 godine.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+            
+            <div class="slike">
+                <div class="container23">
+                    <div class="box">
+                      <img src="images/slike/1.png">
+                      
+                    </div>
+                    <div class="box">
+                      <img src="images/slike/6.png">
+                      
+                    </div>
+                    <div class="box">
+                      <img src="images/slike/7.png">
+                      
+                    </div>
+                    <div class="box">
+                      <img src="images/slike/4.png">
+                      
+                    </div>
+                    <div class="box">
+                        <img src="images/slike/5.png">
+                        
+                      </div>
+                      <div class="box">
+                        <img src=" images/slike/12.png">
+                        
+                      </div>
+                  </div>
+            </div>
+              
+
+            <div id="upis" class="belo" style="border-top: 1px solid #f5f5f5;">
+<br />
+                <div class="sedmi centar">
+
+                    <header class="centar">
+                        <h2 class="noMarg">Prijavite se na vreme!</h2>
+                        <h2 class="noMarg">Broj mesta je ograničen.</h2>
+                    </header>
+
+                    <p>Iskoristite promotivne cene upisa koje se uskoro povećavaju i započnite svoje školovanje uz uspešne web programere i najuglednije predavače ITAcademy.
+                        <br>
+                    </p>
+
+                      <table style="width: 80%; margin:0 auto" border="0" class="tabela">
+                        <tbody>
+                        <tr>
+                            <td>ITAcademy program</td>
+                            <td>Za prijave do {{09_datum-vazenja-ispisan-brojevima-duzi}}*</td>
+                            <td>Puna cena</td>
+                            <td>{{13_manji-broj-rata}} rata</td>
+                            <td class="showRate">{{14_veci-broj-rata}} rata</td>
+                        </tr>
+                        <tr>
+                            <td>Tradicionalna nastava</td>
+                            <td class="ZeleniTxt">{{18_cena-tradicionalno-skolovanje-odjednom}}</td>
+                            <td class="CrveniTxt"><span style="text-decoration: line-through;">{{18_cena-tradicionalno-skolovanje-puna}}</span></td>
+                            <td>{{19_cena-tradicionalno-skolovanje-manji-broj-rata}}</td>
+                            
+                            <td class="showRate">{{20_cena-tradicionalno-skolovanje-veci-broj-rata}}</td>
+                        </tr>
+                        <tr>
+                            <td>Online školovanje</td>
+                            <td class="ZeleniTxt">{{15_cena-online-skolovanje-odjednom}}</td>
+                            <td class="CrveniTxt"><span style="text-decoration: line-through;">{{15_cena-online-skolovanje-puna}}</span></td>
+                            <td>{{16_cena-online-skolovanje-manji-broj-rata}}</td>
+                            
+                            <td class="showRate">{{17_cena-online-skolovanje-veci-broj-rata}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                    <p class="maliFont">*Iznos školarine je prikazan za plaćanje odjednom. U tom slučaju, osnovna cena je dodatno umanjena. Sve cene su navedene u evrima. Specijalni popusti za dvoje ili više zaposlenih iz iste kompanije, kao i za članove njihovih porodica. Za više informacija pozovite <a style="color: #5c5c5c;
+" href="tel:+381114011200">011/4011-200</a>.
+</p>
+
+                    <br>
+
+                </div>
+                <!-- sedmi -->
+
+            </div>
+            <!-- belo -->
+
+            <div id="utisci" class="centar">
+                <div class="fixed_size">
+                    <h2>Za nezaposlene: platite kada se zaposlite</h2>
+
+                    <p>Ako trenutno niste zaposleni, obezbedićemo vam finansiranje 20% cene školovanja. <a style="color: #474747;" href="https://www.it-akademija.com/otkrijte-kako-da-platite-samo-deo-skolovanja"> Saznajte uslove ovde.</a>
+                        <br> Za sva dodatna pitanja obratite nam se na broj telefona
+                        <a style="color: #474747;" href="tel:+381114011200">011/4011-200</a>, ili putem mejla <a style="color: #474747;" href="mailto:office@it-akademija.com"> office@it-akademija.com.</a></p>
+                </div>
+            </div>
+            <div class="fixed_size" id="prijava">
+
+                <h2>Rezervišite svoje mesto</h2>
+
+                <?php include "prijava/formLm1.php"; ?>
+
+                <a href="#" style="display:none" id="buttonTagMan" name="button1" onclick="dataLayer.push({'123': '123456','event':'Potvrda prijave - landing'});">Button 1</a>
+                <!--<div class="uspesna_prijava-show" id="uspesna_prijava" style="display:none;"><h2 style="color: #01ae5e;"> Uspešno ste se prijavili. </h2></div>		-->
+
+                <div id="uspesna_prijava" style="display:none;" class="wrapper">
+                    <h2 style="color:#01ae5e;">Hvala! <br> Uspešno ste se prijavili na kurs. <br> Uskoro ćete biti kontaktirani. </h2></div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+
+
+
+                <script src="js/jquery.validate.min.js"></script>
+                <!--<script src="js/jsonHandler.js"></script>-->
+                <script src="js/script.js"></script>
+
+            </div>
+
+
+
+                <div class="footer centar">
+
+                    <div class="mid">
+
+                        <div id="logo_futer">
+                            <a href="/"><img src="app-images/logo-footer.png" alt="logo"></a>
+                        </div>
+
+                        <div id="txt_futer">
+
+                            <div id="listFooter">
+
+                                <ul>
+                                    <li><a href="/programming-department-programiranje-program-obrazovanja" target="_blank">Programiranje</a>
+                                    </li>
+                                    <li><a href="/administration-department-program-obrazovanja" target="_blank">Administracija</a>
+                                    </li>
+                                    <li><a href="/design-multimedia-department" target="_blank">Dizajn i Multimedija</a>
+                                    </li>
+                                    <li><a href="/it-business-department" target="_blank">IT Poslovanje</a>
+                                    </li>
+                                    <li><a href="/3d-design-cad-autocad-department" target="_blank">3D Design &amp; CAD</a>
+                                    </li>
+                                    <li><a href="/mobile-development-department" target="_blank">Razvoj Mobilnih Aplikacija</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <p class="left"><a style="color: #fff;text-decoration: none" href="tel:+381114011200">+381 (11) 4011 200</a> | <a style="color: #fff;text-decoration: none" href="tel:+381117856 100"> +381 (11) 7856 100 </a> | <a style="color: #fff;text-decoration: none" href="mailto:office@it-akademija.com">office@it-akademija.com</a></p>
+
+                            <!-- <p class="right">+387 (0)33 788 525,
+
++387 (0)51 303 520</p> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+        <!-- wrapper -->
+        <script>
+            $(document).ready(function() {
+                $('a[href*="fragment"]').click(function(e) {
+                    e.preventDefault();
+                    if ($(window).width() < 1020)
+                        return false;
+                    var divID = '#' + $(this).attr('href');
+                    var hasClass = true;
+
+                    $.each($('div[id^="fragment-"]'), function(k, el) {
+                        if (!$(el).hasClass('hdn')) {
+                            if (hasClass) {
+                                $("#" + $(el).attr('id')).slideUp().addClass('hdn');
+                                if ('#' + $(el).attr('id') != divID) {
+                                    $(divID).slideDown().removeClass('hdn');
+                                }
+                                hasClass = false;
+                            }
+                        } else {
+                            if ('#' + $(el).attr('id') == divID) {
+                                $(divID).slideDown().removeClass('hdn');
+                            }
+
+                        }
+                    });
+                });
+
+                $(window).fadeThis({
+                    reverse: false,
+                    baseName: "slide-",
+                    speed: 800,
+                    easing: "swing",
+                    offset: 0,
+                    distance: 130
+                });
+
+                $('#menu-btn').click(function() {
+                    $(this).toggleClass('expanded').siblings('div').slideToggle();
+                });
+            });
+
+            // Select all links with hashes
+            $('a[href*="#"]')
+              // Remove links that don't actually link to anything
+              .not('[href="#"]')
+              .not('[href="#0"]')
+              .click(function(event) {
+                // On-page links
+                if (
+                  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                  &&
+                  location.hostname == this.hostname
+                ) {
+                  // Figure out element to scroll to
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  // Does a scroll target exist?
+                  if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000, function() {
+                    });
+                  }
+                }
+              });
+        </script>
+
+        <script>
+        // SKRIVANJE KOLONE SA VECIM BROJEM RATA
+        '{{prikazi_veci_broj_rata}}' == 'true' ?  $('.showRate').show() : $('.showRate').hide() ;
+        </script>
+
+    </body>
+
+    </html>
